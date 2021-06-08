@@ -4,12 +4,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Reversing ref2 = (str) -> {
+		Reversing exampleString = (str) -> {
 			
 			return new StringBuilder(str).reverse().toString();
 		};
 		
-		System.out.println("The string reversed = " + ref2.reverse("Zaragoza"));
+		System.out.println("The string reversed = " + exampleString.reverse("Zaragoza"));
 
 	}
 

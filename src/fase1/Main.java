@@ -25,10 +25,14 @@ public class Main {
 		
 		//2. Devolver String con letra en función de si los números son pares o impares, separados por comas:
 		System.out.println("\nEjercicio 2");
-		List<Integer> listaDeNumeros = new ArrayList<>(Arrays.asList(5,12,6,2,9,14));
+		List<Integer> listaDeNumeros = new ArrayList<>(Arrays.asList(5,12,6,2,9,14, 44, 23, 77));
 		
+		//Con función:
 		System.out.println(numbersByEvenOrOddPlusAddingALetter(listaDeNumeros, 'e', 'o'));
+		//Directo:
+		String stringResultado = listaDeNumeros.stream().map(numero->numero%2 ==0? "e" + numero : "o" + numero).collect(Collectors.joining(", "));
 
+		System.out.println(stringResultado);
 		//3. De una lista de Strings, Strings que contengan la letra ‘o’:
 		
 		System.out.println("\nEjercicio 3: ");
